@@ -1,8 +1,16 @@
 """
-Podcast Clip Generator with App Integration
+Podcast Clip Generator with App Integration and Enhancement
 
 This script takes website analysis output and podcast transcripts to generate
-viral clips with soft app mentions using OpenAI GPT API.
+viral clips with soft app mentions using OpenAI GPT API. It includes a two-stage
+process: initial clip generation with GPT-5, followed by individual clip 
+enhancement using GPT-4o-mini.
+
+Features:
+- Generate viral clips from podcast transcripts
+- Soft app integration within dialogue
+- Per-clip enhancement for improved flow and viral potential
+- Customizable emotion prompts for enhancement
 
 Required environment variables:
 - OPENAI_API_KEY: Your OpenAI API key
@@ -28,7 +36,9 @@ def generate_clips_from_transcript(
     transcript: str,
     clip_max: int = 4,
     whitelist_keywords: Optional[List[str]] = None,
-    blacklist_keywords: Optional[List[str]] = None
+    blacklist_keywords: Optional[List[str]] = None,
+    enhance_clips: bool = True,
+    emotion_prompt: str = "{emotion prompt}"
 ) -> Dict[str, Any]:
     """
     Generates viral podcast clips with soft app mentions from a transcript.
@@ -39,6 +49,8 @@ def generate_clips_from_transcript(
         clip_max (int): Maximum number of clips to generate (default: 4)
         whitelist_keywords (Optional[List[str]]): Additional keywords to include
         blacklist_keywords (Optional[List[str]]): Keywords to avoid
+        enhance_clips (bool): Whether to enhance clips with additional OpenAI requests (default: True)
+        emotion_prompt (str): Custom emotion enhancement prompt (default: "{emotion prompt}")
         
     Returns:
         Dict[str, Any]: Generated clips with rankings and metadata
@@ -191,7 +203,7 @@ TRANSCRIPT: {transcript}"""
         print(f"Transcript length: {len(transcript)} characters")
         
         response = client.chat.completions.create(
-            model="gpt-5",
+            model="gpt-4.1",
             response_format={"type": "json_object"},
             messages=[
                 {
@@ -202,11 +214,31 @@ TRANSCRIPT: {transcript}"""
                     "role": "user", 
                     "content": user_prompt
                 }
-            ]
+            ], 
+            # reasoning_effort=None
         )
         
         # Parse the JSON response
         result = json.loads(response.choices[0].message.content)
+        
+        # Print initial results before enhancement
+        print("Initial clip generation complete!")
+        print("Raw clips before enhancement:")
+        print(json.dumps(result, indent=2))
+        print()
+        
+        # Enhance each clip with a separate OpenAI request
+        if enhance_clips and result and "clips_ranked" in result:
+            print("Enhancing clips...")
+            enhanced_clips = []
+            for i, clip in enumerate(result["clips_ranked"]):
+                print(f"Enhancing clip {i+1}/{len(result['clips_ranked'])}...")
+                enhanced_clip = enhance_clip(clip, app_name, emotion_prompt)
+                enhanced_clips.append(enhanced_clip)
+            
+            result["clips_ranked"] = enhanced_clips
+            print("Clip enhancement complete!")
+        
         return result
         
     except Exception as e:
@@ -222,7 +254,9 @@ def generate_clips_with_custom_inputs(
     transcript: str,
     clip_max: int = 4,
     whitelist_keywords: Optional[List[str]] = None,
-    blacklist_keywords: Optional[List[str]] = None
+    blacklist_keywords: Optional[List[str]] = None,
+    enhance_clips: bool = True,
+    emotion_prompt: str = "{emotion prompt}"
 ) -> Dict[str, Any]:
     """
     Alternative function to generate clips with custom inputs instead of app analysis output.
@@ -237,6 +271,8 @@ def generate_clips_with_custom_inputs(
         clip_max (int): Maximum number of clips to generate
         whitelist_keywords (Optional[List[str]]): Keywords to prioritize
         blacklist_keywords (Optional[List[str]]): Keywords to avoid
+        enhance_clips (bool): Whether to enhance clips with additional OpenAI requests (default: True)
+        emotion_prompt (str): Custom emotion enhancement prompt (default: "{emotion prompt}")
         
     Returns:
         Dict[str, Any]: Generated clips with rankings and metadata
@@ -258,8 +294,120 @@ def generate_clips_with_custom_inputs(
         transcript=transcript,
         clip_max=clip_max,
         whitelist_keywords=whitelist_keywords,
-        blacklist_keywords=blacklist_keywords
+        blacklist_keywords=blacklist_keywords,
+        enhance_clips=enhance_clips,
+        emotion_prompt=emotion_prompt
     )
+
+def enhance_clip(clip: Dict[str, Any], app_name: str, emotion_prompt: str = "{emotion prompt}") -> Dict[str, Any]:
+    """
+    Enhances a single clip using OpenAI to improve dialogue, flow, and viral potential.
+    
+    Args:
+        clip (Dict[str, Any]): Single clip to enhance
+        app_name (str): Name of the app for context
+        emotion_prompt (str): Custom emotion/enhancement prompt (placeholder by default)
+        
+    Returns:
+        Dict[str, Any]: Enhanced clip with same structure
+    """
+    
+    system_prompt = f"""You are a podcast script enhancer for Eleven Labs V3.  
+        Your job is to transform plain dialogue into engaging, podcast-style speech by adding expressive V3 tags.  
+
+        Rules:
+        1.⁠ ⁠Use podcast-appropriate tags such as [thoughtful], [curious], [reflective], [excited], [narrating], [serious], [sarcastic], [whispers], [sighs].  
+        2.⁠ ⁠Never use [laughs].  
+        3.⁠ ⁠Add pacing with ellipses "...", dashes "—", and pauses for natural flow.  
+        4.⁠ ⁠Enhance emotional delivery while preserving original meaning.  
+        5.⁠ ⁠For multi-speaker podcasts, label speakers clearly and vary tone tags per person.  
+        6.⁠ ⁠Keep tag usage balanced and subtle—avoid sounding artificial.  
+        7.⁠ ⁠Style should feel like a natural podcast conversation or narration, not theatrical acting.  
+
+        you can use this docs. The tags could be anything:
+        ElevenLabs Audio Tags are words wrapped in square brackets that the new Eleven v3 model can interpret and use to direct the audible action. They can be anything from [excited], [whispers], and [sighs] through to [gunshot], [clapping] and [explosion].
+
+     
+        Explore the series
+        Situational Awareness – Tags such as [WHISPER], [SHOUTING], and [SIGH] let Eleven v3 react to the moment—raising stakes, softening warnings, or pausing for suspense.
+        Character Performance – From [pirate voice] to [French accent], tags turn narration into role-play. Shift persona mid-line and direct full-on character performances without changing models.
+        Emotional Context – Cues like [sigh], [excited], or [tired] steer feelings moment by moment, layering tension, relief, or humour—no re-recording needed.
+        Narrative Intelligence – Storytelling is timing. Tags such as [pause], [awe], or [dramatic tone] control rhythm and emphasis so AI voices guide the listener through each beat.
+        Multi-Character Dialogue – Write overlapping lines and quick banter with [interrupting], [overlapping], or tone switches. One model, many voices—natural conversation in a single take.
+        Delivery Control – Fine-tune pacing and emphasis. Tags like [pause], [rushed], or [drawn out] give precision over tempo, turning plain text into performance.
+        Accent Emulation – Switch regions on the fly—[American accent], [British accent], [Southern US accent] and more—for culturally rich speech without model swaps.
+
+
+        Here is a funny example:
+        (British] [exasperated] [gasp] YOU EVER GO TO A BATHROOM IN A GAS STATION?!
+        [disgusted] [shudder] It's like walking into a crime scene where the victim was a toilet. The urinal looks like someone tried to murder a Twinkie with a piss cannon! [gagging] The floor? STICKIER than a PORNOGRAPHIC GLUE TRAP! [chuckles] You step in and your shoes make that sound like you're peeling Velcro off Satan's asshole-skkurk! skkurk! (outraged] AND WHO ARE THESE ANIMALS WHO JUST SHIT ON THE SEAT?!
+        [shouting] [furious] WHO ARE YOU?! WHAT'S WRONG WITH YOU?! YOU NEED A GPS TO FIND THE FUCKING BOWL?!
+        [frustrated shouting] [enraged] IT'S RIGHT THERE!!! RIGHT BELOW YOUR SQUATTING SHIT DISPENSER!
+        [scolding] This isn't some ancient Mayan ritual-just aim, squeeze, and flush, you caveman! [spitting] [building anger] AND DON'T GET ME STARTED ON SELF-CHECKOUT MACHINES!!!
+        (indignant] [annoyed] WHY AM I BAGGING MY OWN GROCERIES, JANET?!
+        (annoyed sigh] [exasperated] | CAME IN HERE TO BUY TOILET PAPER, NOT APPLY FOR A JOB!| (mocking robot voice] [mechanical] You ever have a robot tell you "Unexpected item in the bagging area"? [screaming) [frantic] YES! IT'S MY SANITY! IT DOESN'T BELONG HERE!!! [groans] [disgusted] OH—AND AIRPLANE FOOD?! DON'T EVEN!!!
+        [disgusted tone] What kind of sadistic sky chef decided that a tiny cube of turkey, a wet nap, and a soggy fucking cookie counts as a meal?! [retching]
+        And then the pilot comes on the intercom like he's narrating a funeral: (monotone voice) (droning) "Uhhh, we'll be landing in about 40 minutes..." (sarcastic] [dryly] YEAH THANKS, SKY DAD. WAKE ME UP WHEN THE ENGINE FALLS OFF!
+        (exasperated sigh] [yelling] AND WHO ARE THESE ASSHOLES WHO BRING TUNA SANDWICHES ON A PLANE?!
+
+        Also another funny eaxmple:
+        (Smashmeuth - Allstar) Somebody once told me
+        The world is gonna blow me
+        I ain't the sharpest plug in the drawer...
+        She was lookin' kinda dumb
+        With her finger in her bum
+        And a handful of lube in her... uh... pants?
+
+
+
+    CRITICAL RULES:
+    - Keep the EXACT same JSON structure and all fields
+    - Maintain the same start_time and end_time
+    - Dont change any words or anything. Its just emotion tags and punctuation.
+    - Keep the same speakers (Speaker A/B)
+"""
+
+    user_prompt = f"""Enhance this podcast clip:
+
+{json.dumps(clip, indent=2)}
+
+CRITICAL: Return the enhanced clip in the exact same JSON structure with all the same fields.
+
+IMPORTANT: Make sure the "dialogue_lines" array contains ALL the individual lines from the enhanced "full_30s_transcript". Each line in the transcript should have a corresponding entry in dialogue_lines with the same enhanced text (including emotion tags). Don't truncate the dialogue_lines array - it should have the complete conversation."""
+
+    try:
+        print(f"  Sending enhancement request for clip {clip.get('rank', 'unknown')}...")
+        response = client.chat.completions.create(
+            model="gpt-4.1",
+            response_format={"type": "json_object"},
+            messages=[
+                {
+                    "role": "system",
+                    "content": system_prompt
+                },
+                {
+                    "role": "user", 
+                    "content": user_prompt
+                }
+            ]
+        )
+        
+        # Parse the enhanced clip
+        enhanced_clip = json.loads(response.choices[0].message.content)
+        print(f"  Enhancement successful for clip {clip.get('rank', 'unknown')}")
+        
+        # Check if enhancement actually changed anything
+        if enhanced_clip != clip:
+            print(f"  Clip {clip.get('rank', 'unknown')} was modified during enhancement")
+        else:
+            print(f"  Clip {clip.get('rank', 'unknown')} was not modified during enhancement")
+            
+        return enhanced_clip
+        
+    except Exception as e:
+        print(f"Error enhancing clip {clip.get('rank', 'unknown')}: {e}")
+        print(f"  Exception details: {type(e).__name__}: {str(e)}")
+        return clip  # Return original clip if enhancement fails
 
 def save_clips_to_file(clips_result: Dict[str, Any], output_filename: str = "generated_clips.json"):
     """
@@ -312,7 +460,9 @@ def main():
     result = generate_clips_from_transcript(
         app_analysis=example_app_analysis,
         transcript=example_transcript,
-        clip_max=2
+        clip_max=2,
+        enhance_clips=True,  # Enable enhancement
+        emotion_prompt="{emotion prompt}"  # Placeholder for custom emotion prompt
     )
     
     if result:

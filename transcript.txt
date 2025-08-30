@@ -1,0 +1,574 @@
+0:05
+because saying that poor people on average have lower conscientiousness, I'm still worried about this going out.
+0:11
+Holy (censored) that's insulting. If you're nuanced, then you're smart. You can understand how it's both real and not insulting.
+0:18
+But if you're anything else and if you're very politically motivated, it's gonna be a nuclear bomb.
+0:24
+You're blaming people for their problems. - Please welcome return guest, Dr. Mike Israetel PhD
+0:31
+to "The Checkup" podcast. We had a very scientific, even philosophical discussion about
+0:38
+the nature versus nurture debate surrounding obesity. We get into that and so much more,
+0:44
+muscle, its implication on your health, what's hype, what's not. You're gonna enjoy this conversation. I know I did.
+0:51
+Let's get started with "The Checkup Podcast with Doctor Mike." Squared? I remember last time we talked about this,
+ AI
+0:57
+I don't think you read comments and feedback and stuff. - I do sometimes. - Oh, like I was looking at feedback at our conversation
+1:03
+and a lot of people were saying that they don't believe AI is exponential, as you say it is.
+1:11
+- Yeah, they're just categorically wrong. This is not really like a debatable topic for people who are deeply entrenched in the field.
+1:18
+I can approach this from a variety of angles to illustrate this point. But it used to be that the number of people that were saying
+1:25
+that artificial general intelligence, roughly human capability intelligence, back in the late nineties,
+1:32
+the vast majority of AI researchers thought it was some combination of impossible. It would arrive later than 2100.
+1:38
+Every single five years that they do investigations into what the consensus of the AI profession is,
+1:44
+that number falls lower and lower and lower up until and originally Ray Kurzweil was kind of the real kind of, not the father,
+1:51
+but one of the main progenitors of this idea that AGI is coming much sooner than people think. His original prognostication date was 2030.
+1:58
+He later revised it to 2029, which is oddly specific. There are conversations now in among the CEOs
+2:05
+of Anthropic, OpenAI, various people at Google. These are the people making these things.
+2:10
+And the conversation is now is like, are we gonna hit AGI in like, 2027, or is it really gonna be 2029 or somewhere between?
+2:18
+And so the entire profession has been coalescing into more and more aggressive prediction timelines.
+2:25
+And so the idea that like I'm overly pessimistic or sorry, overly optimistic about it is I've just read enough about it
+2:31
+to understand like this is the space that we live in and the pessimism.
+2:37
+There's also another thing some, a well-documented human intellectual fallacy called the pessimistic fallacy.
+2:43
+And most humans on average are more pessimistic than they should be. But it's also understandable because humans evolved in an environment.
+2:51
+Most of our brain and the way we think was designed in periods of evolution where hunter gatherer survival
+2:56
+was how we made things happen. Hell is a pretty good way to describe what that was like.
+3:02
+You know, elements of paradise and lots of elements of hell and things also just did not get better over time
+3:07
+in any measurable way. And you could absolutely depend on things getting real bad real soon for most people, like,
+3:13
+the average age of survival was like, 30, so on and so forth. So that's where our brains kind of have a baseline feel of what's happening.
+3:19
+And over the last five to 10,000 years, there's been an exponential growth in culture and society
+3:26
+and industry that means that we're really out of touch with the rate of progress. We're not usually exponential thinkers.
+3:33
+We're linear thinkers. Almost nobody predicted the internet. And I believe 1997 or 1988, Paul Krugman,
+3:40
+Nobel Prize winning economist, had a comment that I'm sure he regrets making, which is, you know, "The internet's probably not gonna go anywhere
+3:46
+"because most people just don't "have much to say to each other." I mean, like we're laughing at it now. He also recently, I believe,
+3:52
+please don't take my word for this, you should verify this, but I think he also a few months back said something negative about AI as well.
+3:58
+He'll be tripping twice in his life, unfortunately. But the internet was this thing that is just straight up pure magic.
+4:05
+Like think about Amazon. You use Amazon? - Mm-hmm. - Like you think of something and you actually don't even have to type anything anymore.
+4:11
+You go, "Hey Alexa, can you order me XYZ?" - I don't use that. - Me neither. My parents do. She's great.
+4:17
+She's not even an LLM yet, believe it or not. - [Mike] She's not a? - Not a large language model, like. - Oh okay, got it.
+4:23
+- You have to upgrade her to that. But you go on your phone and you go like, protein bars and it finds the one you like
+4:29
+and you go, okay, click go hit. And then it could arrive is between 5:00 and 7:00 PM that same day.
+4:35
+I'm like, how? How? That's insane. We live in an insane time already.
+4:40
+Imagine telling someone in the nineties like, "Dude, you can just like, you'll have a cellphone." And they're like, "Okay, like one of those big ones?"
+4:46
+You're like, "It's much smaller but way more power." Like a hundred times more powerful than your best desktop today.
+4:51
+Like okay, it's gonna be in your pocket all the time. They're like, "Okay, so the rich have it?" Like, everyone in the world has one.
+4:57
+Okay, you just click on something and then it just arrives later. Like, where's it arriving from? Like, I actually have no idea, but I don't care
+5:03
+'cause it arrives on time. You can think of about a hundred thousand different ways in which we take totally for granted the fact
+5:08
+that we live in an era of insane abundance and prosperity and predictable improvement.
+5:13
+And so combining all of that together and saying, well, Mike's like a bit too optimistic about AI.
+5:19
+I would say I'm probably on the aggregate when I hopefully am alive in 20 years and look back,
+5:25
+I was probably like more optimistic than most people, but still more pessimistic than the reality that occurred.
+5:30
+- I think about rate limiting steps in the exponential growth 'cause I absolutely can see the amount of growth
+5:36
+that we've had in scientific understanding achievement. - [Mike] Sure. - In fact, there's a great book called "The Half-Life of Facts"
+5:42
+that initially was doing research to prove why we have so much scientific breakthroughs.
+5:48
+And a big part of it is a pretty cool statistic where 80% of scientists that have ever lived
+5:55
+are alive today. - Oh yeah. - Because this is the time when they started becoming scientists.
+6:01
+- Sure, it used to be very rare to be a scientist. - And through that collaboration there's been an exponential growth. But then there's gonna be a rate limiting step
+6:08
+because there's not that many people to keep growing the field of science. - AGI will solve that problem. - So that's the next factor that comes into it.
+6:15
+Amazon, and the reason why its ability to be at the level where it is, is because of incentives
+6:21
+and incentives aligning creates a really clear road for something like Amazon to occur.
+6:28
+- [Mike] Yeah. - So you have incentivization from capitalism, people that want those products.
+6:33
+- Yes. - The products being able to be made at a reasonable way, area for storage.
+6:39
+All these things aligning together because we all uniformly agree that's what we want. And I think it's very easy for incentives to shift
+6:48
+because humans are not always rational. And there's a lot of emotional components,
+6:56
+wars, political divisiveness, disease,
+7:02
+that can interrupt the algorithmic growth that we've seen in the past. - It has never interrupted it up until, never.
+7:09
+So if you look at all of the important events in geological history, biological history,
+7:16
+cultural anthropological history and the history of development technology and civilization, you can plot them all on the same log scale.
+7:23
+And they basically don't move up and down accounting for wars, holocausts, massive natural disasters.
+7:30
+And there's a reason for that. At least a candidate hypothesis. It's a very mysterious thing to see in the data.
+7:36
+The data's crystal clear about it. Like how the hell did World War II not slow down progress? Because there are two things that allow progress to happen.
+7:45
+One is abundance. Like you know, you have time to work on cool shit, you have money to work on cool shit.
+7:51
+You develop cool shit. The other is incentive, the impetus to make something happen because of difficulty.
+7:58
+And these work kind of as top and bottom end buffers to the rate of progress. When you have good times,
+8:04
+you have a huge abundance but not a lot of incentive to make shit happen that's cool because it doesn't matter. Everything's kind of nice. So who cares?
+8:11
+Like really, is it really more important to make the next amazing iPhone? Like the iPhone's pretty goddamn good, like who cares?
+8:17
+However, when you get into wars, natural disasters, that's when the incentive to make radical innovations really pops up
+8:25
+and seems to cover that difference. So what we see is a very homogenous rate overall.
+8:30
+Now there are absolutely declivities and proclivities throughout, but in the grand historical sense, they seem to so far be very minor.
+8:37
+Like the Cambrian explosion of life on Earth seems to be a big deal when you look at it. But when you spread out the timeline, you're like,
+8:44
+oh, that's actually quite predictable if that would've happened, I guess it's all on the same curve, so. - Yeah, I think about it like I think of
+8:50
+when investors pitch you their deck and they say, what's that line?
+8:55
+Past results don't necessarily reflect future outcomes. (laughs) - Sure, sure. And that's absolutely it. - So I say all of that
+9:00
+with that in mind. - Yeah. - Of how the future plays out. And it's been interesting how the natural human buffer
+9:06
+that you discuss exists and has guided us here. And then there's also the regulation of it all and the wars
+9:14
+and the economic progress of it all. Like there was talk about social media
+9:20
+just continuing to grow in a way that was becoming unreasonable.
+9:25
+And then you see young people say, "Well, I'm kind of getting bored of doing the same thing,
+9:31
+"of posting perfect images on Instagram." Now you know what? The less tailored, less structured.
+9:39
+- Streaming. - Yeah, exactly, streaming. - Live. - Yeah, live. So like it's not always been clear to me
+9:44
+how the future will adapt to current technologies. And I'm always aware of that when trying to make predictions
+9:52
+and that's why even though I probably would've agreed with someone who is very pooh-poohing AI 10 years ago,
+9:58
+but not because I too pooh-pooh AI. I just pooh-pooh their ability to make a good prediction. - Sure.
+10:04
+Most predictions that are very specific end up getting a lot wrong. - Yeah. - A hundred percent.
+10:09
+But we can just go based on generalities. The amount of total intelligence in our society
+10:15
+has been increasing exponentially for all of measured time. And it looks like it's gonna continue to do that.
+10:20
+They've done lots of work on theoretical limits of intelligence based on like, physics and information theory.
+10:25
+And the limits of intelligence are preposterous, like, way out of reach of anything you could surmise. Like, you could hypothetically turn like
+10:32
+eh, a decent fraction of the earth's mass into a computer. And the amount of intelligence it has is like,
+10:37
+humans are like a fungal growth on the earth's crust level of like occupying the solar system.
+10:43
+People are like, what about physical limits? Like, you know, we could just mine Jupiter for matter and like I can't like, there's like a storm on Jupiter,
+10:51
+the eye or whatever that's like, three times bigger than the Earth. Like it's a lot of hydrogen, you know?
+10:57
+So you think about physical limits, you don't really get a big limit on that one. And then you think about trajectories,
+11:02
+trajectories have been good so far and you think, okay, so if intelligence increases a little bit more and a little bit more and a little bit more,
+11:09
+you can start to see certain problems kind of melting away. Because a lot of the problems that are are extant right now
+11:15
+are because of a lack of intelligence. Here's something fun and wildly politically incorrect.
+ Political Anthropology
+11:21
+Ta-da. So as you measure people's political opinions
+11:26
+and you scale them against proxies or direct measurements of their intelligence, there is a massive degree of consensus on political opinions
+11:34
+as intelligence scales on either way. People who are less intelligent on average, measured however you like,
+11:39
+tend to be more authoritarian in both regard of social and economic freedom. So people that are less intelligent
+11:45
+tend to not be for social liberties. They're not super big fans of gay rights, trans rights, women's rights, the whole thing.
+11:51
+And they're not big fans of economic freedom in general. They seem to think that more government regulation is the way to do things.
+11:57
+Like anytime they see something wrong, they go, "There should be a law that against that." People on average, as they become more intelligent,
+12:02
+seem to become more libertine in their attitudes. They favor a freer economy, substantially less, more intelligent regulation
+12:09
+and they favor more libertine approach to social things like live and let live kind of attitude.
+12:14
+And so if you manage to increase the amount of intelligence in the system, it's going to cause a predictably better place
+12:21
+for all of us to live. Because when you have peoples that tend to be lower intelligence on average
+12:28
+running an institution or country wherever, they generally run it really poorly. And you have all of the social maladies
+12:34
+that you can see in a variety of areas. Whereas as people become more intelligent or as the aggregate of people
+12:40
+plus machine intelligence becomes better, things get better overall. And so if you scale that out at some point you're like, man,
+12:47
+if our collective IQ us plus machines goes up another 10 points, a lot of places are gonna be free or more prosperous
+12:53
+and cleaner and more stable and have less war. Because if you think about it for like a little bit, you know, basic economics, very basic economics,
+12:59
+war almost never makes logical sense, almost ever. Like, should we attack the Netherlands?
+13:05
+Why? To get their resources. Like, we can just buy the resources. We can get 'em for free. Like no, you still need to buy them
+13:11
+'cause then some of us live there and they sell us that stuff. Like the whole war for oil nonsense is just almost certainly just pure nonsense.
+13:17
+There's all the war for oil in the modern time has just not occurred. - Well, that's that emotional reasoning
+13:22
+that we're talking about in humans. - 100%, yeah. And so like as you scale up your intelligence, your emotional reasoning tends to capture less
+13:27
+and less of your cognitive bandwidth. - I don't know if I agree with that. - It's just demonstrably true empirically. - Well, I think- - On average.
+13:33
+Now there are absolutely exceptions of smart people. You're really having a lot of feelings. - No, no, I'm not talking about the extremes. I just see that like as IQs
+13:40
+and Nobel laureates have attested that they oftentimes are able to convince themselves
+13:45
+of widely inaccurate theories and the belief that whatever they're saying is true when it's absolutely not true.
+13:52
+That's also been shown. And then also there's a chicken or the egg effect here
+13:57
+where it's when you are poorer and have less education, you need to have a little bit more
+14:03
+of an authoritative mindset to succeed in order to be practically successful.
+14:09
+And when you're wealthy and you have less to worry about, you think about being more free and you think about other things where
+14:16
+as when you're poorer you have to survive so that you, it frees you up to think more liberally and peacefully.
+14:23
+Which is why there's always so much disagreement of people who live on the coasts that have money versus people who are struggling to be rising in society
+14:32
+and they want their children to focus and live the most strict lifestyle because they think that's the only way to achieve it.
+14:38
+And they could be right, given their circumstances. Do you think that could be a reasonable thought? - Maybe.
+14:44
+So to the first point of Nobel laureates questioning their ability
+14:50
+or illustrating their ability to sort of justify anything they'd like, the fact that they're introspective enough to know that
+14:58
+that's happening is already alienating them in their own little group. - Well, I don't think they're aware of it. I think we studying them are aware of that.
+15:04
+- Oh, I see. I think some of 'em have talked about it openly. - [Mike] Maybe. - And we being less intelligent than global Nobel laureates
+15:11
+are probably less self-aware than they are. And if we are self-aware of it, you have to ask what about people
+15:17
+of substantially lower intelligence? They're substantially less aware in general. And so they're apt to make
+15:24
+mostly emotionally biased choices. As a matter of fact, many people when you ask 'em
+15:29
+what they think about politics are answering a completely different question. They're answering, actually I'm wearing my Thomas Sowell shirt
+15:35
+to illustrate that exact thing. - Yep. - It's a former position of his, current position of his. Most people feel a certain way about politics.
+15:42
+They don't think a certain way about politics, which is the wrong thing altogether because politics is asking the question
+15:47
+of how do you run a society for the maximum benefit? However you define that, it's a technical question,
+15:52
+it's a machine question. It's not a question of how you feel about things. Most people feel rather than think
+15:58
+about these kinds of topics, people who are more intelligent tend to think on the margins more than not.
+16:04
+And people who are less intelligent tend to feel more than not. And so on average, if you think Nobel laureates are biased,
+16:10
+you should talk to someone of profoundly lower intelligence and you will see probably exclusively bias
+16:16
+and almost nothing else. - Hmm, I wonder what the research of that actually entails. - And a whole-hearted confidence in those opinions.
+16:22
+- [Mike] From an anthropology standpoint. - Give it a look. It's not a problem. - Yeah, because no, no, no. Like even from a practical standpoint of what I've experienced in my life of
+ Rich vs. Poor
+16:29
+I treat two very distinct populations of where I practice medicine, where I have people who live in the wealthy community
+16:36
+where my hospital exists. And then I have people who are coming in for the community health aspect of it, charity care aspect,
+16:42
+perhaps that are employed by the people who are very wealthy. And I see the problems that they experience their logic
+16:50
+by how they approach the world and the strategies that they each use to survive.
+16:55
+And they're radically different in terms of looking at them on paper.
+17:01
+But they're radically appropriate given their situation. I think if you are-
+17:07
+- I think you're being very charitable. - I think if you're a single mother who's working two jobs,
+17:12
+have two children, one of which that's struggling academically,
+17:17
+you don't have the capacity or time to think about what a better world looks like
+17:25
+for certain subsets of individuals. You're trying to be as practical and create the guardrails
+17:30
+for the success of your immediate family. I think looking down upon that as dumb or wrong I think misses the point
+17:39
+of how that person got there and therefore we're judging a whole group of people
+17:44
+for making a decision that had we been in that situation, we would've made the same exact decision.
+17:51
+- I don't agree. - You don't agree? - No. - Why is that? - Boy, so couple caveats.
+17:59
+We're speaking in statistical generalities, so we're not trying to paint an entire group of people any way.
+18:04
+The group of people we're painting is also a statistical abstraction. It's not an actual group of people you can point to.
+18:10
+One example of this is people talk about the poor but something like a third of the poor or just like people who just graduated high school,
+18:17
+most of them will end up quite wealthy. They're just at the wrong time of life. So you can't group them in with various other demographic groups
+18:23
+that are poor consistently throughout their lives. - And when you talk about the rich, it's about how much money they have?
+18:29
+- [Mike] Rich when, right. - Or how much they earn earn this year. - How much they're making, right. - Because as Thomas Sowell says. - [Mike] Right, that's not always the same.
+18:34
+- That changes every year. - Oh yeah. All the time, yeah. - Because the people that are extremely wealthy may not have earned a lot this year. - Sure, sure.
+18:40
+And they're also within any kind of category, let's just say poor people, there are vastly different kinds of people in that with vastly different kinds of behavioral patterns.
+18:47
+But the behavioral patterns seem to be the number one correlate of what continues
+18:53
+to keep you poorer than average or continues to push you on the trajectory of wealthier than average eventually.
+18:59
+So when we say on average poor people do XYZ, you can give me millions of counter examples
+19:04
+of poor people being very diligent, very organized, very conscientious, very thoughtful, and very coordinated in their action.
+19:12
+And those people are much less likely to remain poor than the fraction of poor people that have the opposite of those characteristics.
+19:19
+So when you look at wealthier people and poor people on average, you tend to find that wealthier people on average
+19:24
+are more conscientious, more goal-driven, more organized, clear thinkers about things. They have lots of feelings just like everyone else,
+19:30
+but they don't let the feelings take over as much as people who on average who are poor. But the averages kind of belie
+19:36
+the fact that it really goes individual by individual. And whether or not you're rich or poor, you have no doubt,
+19:42
+well, maybe no doubt, some people are not capable of having as many social interactions.
+19:47
+But you've met at least four kinds of people, likely. Poor person who is like just a really conscientious,
+19:59
+really organized, really thoughtful, calm person, who is very intelligent, very motivated to improve their circumstance
+20:05
+even if they've been dealt a nasty hand like they had married someone who was really good to them,
+20:11
+that person died an automobile accident, left them with three children and now they work two jobs and they're doing their goddamn best.
+20:19
+That person and their children through the genetic relatedness of having those features inherited from them and the very nice father
+20:24
+that unfortunately was taken too early, their children and them will probably be over time on average expectedly rising through the income strata
+20:31
+because they're just good at stuff. That's just who they are. They don't spend excessively, they don't make impulsive decisions as often,
+20:37
+so on and so forth. So that's subtype number one. Subtype number two of a poor person is when you hang around them for long enough,
+20:44
+you don't say this to them personally. You could be like, "Motherfucker, "I'll tell you why you're poor, goddamn it."
+20:49
+You spend all of your money, you're addicted to like 10 different things. You have an I don't give a fuck attitude about basically everything.
+20:55
+You've never invested a dime in improving yourself in any way whatsoever. You're rude to everyone around you.
+21:01
+How are you possibly gonna make money and hold onto it? An almost impossibility. So there's two subtypes of poor people.
+21:07
+- So for that second subtype, is that caused by society? A societal situation or is that a genetic situation?
+21:17
+- It's a combination of the two. But the genetic explains much more of the variance as far as the literature I've consumed
+21:22
+because both poor people are, both subtypes of poor people
+21:28
+are exposed to roughly the same social influences and it does not affect everyone the same way. There are some cultural elements there
+21:34
+that have to be thrown in 'cause there's kind of like society at large, there's genetics, but there's also an intermediary variable, culture.
+21:40
+How do you process society and express your genetics? There's probably something to say for culture though, based on the more recent
+21:45
+behavioral genetic data that I've seen, people in some sense secrete their culture based on their genetics, at least to some great degree.
+21:53
+Like if you're the kind of person that's born into even a family of very highly unconscientious people,
+21:58
+but you have a lot of trait conscientiousness, and they introduce you to a very low conscientious culture, like, "Just fuck it, do whatever. YOLO."
+22:05
+You probably as you mature into teenagehood will be like, "This sucks. "I need to get the fuck outta here." You know, like the small town,
+22:10
+get me outta here. - Sure, that exists. - I'm not made for this kind of thing. - We have two of those people so far. Two archetypes, very rough. Right? - And there's also, just to finish that point.
+22:17
+- [Mike] Yeah, yeah. - I think there's a protective factor if you're in the correct social group.
+22:23
+So how many kids that may, let's say genetically have an issue with addiction,
+22:31
+with lack of delayed gratification ability, all those factors that we label as potentially successful,
+22:38
+like they have low levels of that, but if they're in the right social class, they're born wealthy into a wealthy family
+22:44
+in the United States, will they make mistakes and suffer consequences? Absolutely.
+22:49
+But it's protective in the way that they're not gonna become drastically poor.
+22:55
+- You just made category three of the four. So category three is people who come from wealth
+23:00
+but exhibit very low conscientiousness and they tend to have that protective buffer.
+23:05
+But you can work your way through any protective buffer and through multiple generations of low conscientious individuals
+23:11
+you can lose absolutely everything and just become absolutely destitute, no problem. Say gambling addiction can cancel out
+23:18
+every single bit of generational wealth in a matter of minutes if you think about it. Definitely hours and days, for sure years.
+23:25
+Profound drug addiction. I would like to believe in a world in which people who have a huge proneness to drug addiction,
+23:32
+you simply give them the right access to care and they're better. Mike, you've seen the data on drug recovery rates.
+23:38
+It's not pretty. A lot of wealthy people who have all the resources who are prone to drug addiction just continue.
+23:44
+I'm not gonna name any celebrities. - [Mike] Oh yeah. - Continue to struggle with it their entire lives. And so yes, the buffer is real,
+23:49
+but we can't paint the buffer too strongly as like, you're never gonna be poor. Oh, you can recess down no problem.
+23:57
+- Yeah, what the data- - [Mike] Much easier to lose than to gain. - Yeah, what the data shows about specifically, let's say substance abuse is quite interesting
+24:03
+in that if you look at people who are struggling with substance abuse in decade three of their life,
+24:09
+checking in back in with them at decade five, the odds that they still have a substance abuse issue
+24:15
+is not as high as you think it would be. So really a lot of times it's about buying time
+24:22
+to get passed this issue by a means of risk reduction. And that could be taking a pharmaceutical medication
+24:29
+to get you off of that medicine even though it has side effects. It could mean trading one unhealthy habit
+24:35
+like substance abuse for a healthier one. How many people cope- - Fitness? - Yeah. With issues in their lives
+24:40
+through abusing themselves in fitness or maybe overusing testosterone because before they were addicted to heroin
+24:47
+and they've gotten off heroin but they still miss that rush or whatever it is. - Sure, sure. - And they're getting it elsewhere
+24:53
+in a slightly less negative way. - [Mike] Yeah. - So it's pretty interesting to see how if you look at humans in one point in their life,
+24:59
+that doesn't always equate, like we say people who have substance abuse, the same way that it's unfair to say people who are rich.
+25:06
+- Yeah. - This year or earn the most this year, the top 1% this year. It's not gonna be next year. - Yeah. - The same holds true for people with substance abuse.
+25:13
+- Yeah, and every other factor as well. - Yeah, exactly. - That's an excellent point. But the other last category
+ Nepotism / Prime / RFK Jr.
+25:19
+is people who are relatively wealthy already and also have high trait conscientiousness and those individuals tend to have extreme amounts
+25:26
+of continual success and aggregate high amounts of intergenerational wealth. I've met a few folks who are from old money, old money,
+25:34
+and one of the things that stood out to me about them was how many of them were just mega degenerate losers.
+25:41
+Just totally just riding it out. What also stuck out is how many of them were just unbelievably awesome,
+25:46
+kind, conscientious people that you're like, I can tell you why your parents were successful 'cause you're related to them and you got the same thing.
+25:54
+Like, I know at least one person who came from money, money, and he's on like his third $100 million business creation all by himself.
+26:02
+No help for mom and dad in any capacity, just like same idea. - Well, I can't believe no help for mom and dad. If you have a protective buffer behind you,
+26:09
+the amount of risk you're willing to take on is gonna be greatly different- - I have an exact counterpoint to that as an intellectual exercise. - Tell me.
+26:16
+- If you have no impetus to succeed, because it doesn't matter 'cause you're already rich,
+26:21
+you have arguably much less drive to make it. People who came from very little always recount the fact
+26:28
+that it's because they came from very little that lift them up and made them drive. Whereas we are all familiar with the trope
+26:34
+of the wealthy person that goes to Dartmouth, but they take whatever classes they feel like taking 'cause who gives a shit?
+26:41
+Dad did hedge funds and I don't have to do anything. So how do you traverse that?
+26:47
+- The way that I think about it is they wanna do better than whatever goalpost was set for them.
+26:53
+You know, we're speaking of tropes. Daddy didn't love me because he thought he was more successful than me, so I'm gonna outdo him.
+26:59
+Or my dad started a billion dollar company, I wanna make a $10 billion company. - Sure.
+27:04
+- [Mike] I think that motivation still exists for that industry. - Definitely, but it also I think works the other way where people who have seen close to the bottom
+27:11
+really don't like to be close to the bottom and they're maybe less likely to be lazy about things
+27:17
+and just let it ride. - Sure, but how much do connections matter, like coming to America for us? - Almost not at all. - Come on.
+27:23
+That's complete nonsense. - Almost not at all. - Come on. That's complete nonsense. I'll even give you a practical simple takeaway from it.
+27:29
+- [Mike] Sure. - Moving to America, not having a connection for a plumber, a car repair person,
+27:34
+a dentist versus someone who has all that and then that frees them up to have the time to work more,
+27:41
+to achieve more, to have the buddy buddy relationship of a grant going their way is a inherent advantage.
+27:50
+- Yeah. - So how can we say that it's not? - Yeah, yeah. It's short term advantage. It definitely makes things easier in the short term for you,
+27:56
+but usually that stuff doesn't last. So if you have somebody who's been connected into business,
+28:03
+like dad was in the industry, said, "Hey, hire my son." You know, that sort of thing. - Sure. Nepotism.
+28:09
+- Business is ruthless. I don't give a fuck who you're related to. If you're related to dad and he said hire you, I'll hire you.
+28:15
+You don't perform and your stock trading isn't up to standard, I'm gonna hire some dude from China that's a fucking merc.
+28:22
+And he doesn't give a fuck and I don't know him. - You would think so. - I don't know his parents. - There's so much nepotism. There's so many people who are terrible
+28:28
+at their jobs at the highest levels. - Yeah, many. But it's much rarer than you may think.
+28:34
+And there are also so many people at the highest levels that are just good and over time,
+28:40
+especially the free market. Now government's slightly different, but the free market, private institutions, private companies,
+28:47
+grotesquely over reward capability versus anything else. You ever been inside Google?
+28:52
+And no offense to anyone, all jokes, all love and respect. Google, all the companies associated with the tech sphere,
+28:59
+bro, it's like one half of the nation of India. Is there some kind of thing where people just love Indians at tech companies?
+29:05
+No, they're fucking mercs, dude. They're fucking good. They're just good. And like, I'm gonna hire people that are good
+29:11
+and it's also, we like to hold two thoughts in our heads at the same time about, you know,
+29:17
+the myth of the, maybe not myth, the exaggerated form of the greedy capitalist. It's both a nepotistic asshole and a greedy asshole.
+29:24
+Nepotism and greed don't work very well together because if I'm greedy enough, I don't need you, my son,
+29:29
+working for my company because you're flubbing. I need your Giriraj Patel working for my company
+29:35
+'cause he fucking comes in at 6:00 in the morning. I don't think he ever leaves. His portfolio looks like someone make believed it into existence.
+29:41
+I wanna get this guy. Who is the current, was it CEO of Microsoft? Or Microsoft or is it Google?
+29:47
+One of the guys is like an Indian dude, right? - Yeah, I think. - Where'd he come from? Where was his advantage? - What I've seen anecdotally speaking,
+29:54
+the practical version of what you're saying is you're the greedy asshole that hires his son who's inept
