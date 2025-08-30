@@ -5,4 +5,4 @@ firecrawl-py
 syncsdk
 elevenlabs
 ffmpeg-python
-
+aiohttp

@@ -116,7 +116,7 @@ Disqualify meta-chatter, bios, tour dates, unrelated anecdotes, off-domain polit
 2) *Hooks:* strong/contrarian/quotable. If weak OR off-topic → discard.
 3) *App mention (soft, in-dialogue):* insert one casual spoken line between ~7–15s by a single speaker; *the other speaker must respond afterwards* with ≥2 natural lines so the clip *does not end* on the mention. Style: personal anecdote + small wow factor; never ad-like.
 4) *Voice:* preserve original tone. Verbatim-first; light smoothing only. No marketing language.
-5) *Speakers / Dialogue:* Back-and-forth with *Speaker A / Speaker B* (monologue allowed). Do not fabricate beyond the single soft mention line.
+5) *Speakers / Dialogue:* STRICT ALTERNATION REQUIRED - dialogue MUST follow the pattern Speaker A → Speaker B → Speaker A → Speaker B → etc. NO exceptions, NO monologues, NO consecutive lines from the same speaker. Each clip must start with Speaker A and strictly alternate throughout. Do not fabricate beyond the single soft mention line.
 6) *Conversational realism:* Use light connectors (e.g., "yeah," "right," "I mean," "okay so," "exactly," "for real") *sparingly* (≤1 per line, ≤6 per clip total). No stacked fillers; clarity first.
 7) *Overlap:* allowed if hooks are close.
 8) *Clip count:* Return *up to CLIP_MAX* clips that pass the Relevance Gate. If fewer qualify, return *however many are solid; if **none* qualify, return *the single best on-topic candidate* (min 1) and mark notes that others were too weak/off-topic.
@@ -149,8 +149,10 @@ Expose a ⁠ relevance_score_0_1 ⁠ per clip based on #1 (context fit), not on 
       "start_time": "HH:MM:SS",
       "end_time": "HH:MM:SS",
       "hook_text": "string",
-      "full_30s_transcript": "string (faithful dialogue with Speaker A/B; includes the soft mention as one spoken line; continues ≥2 lines after; natural connectors used sparingly)",
+      "full_30s_transcript": "string (faithful dialogue with STRICT ALTERNATION: Speaker A → Speaker B → Speaker A → Speaker B; includes the soft mention as one spoken line; continues ≥2 lines after; natural connectors used sparingly)",
       "dialogue_lines": [
+        {"speaker": "Speaker A", "text": "string"},
+        {"speaker": "Speaker B", "text": "string"},
         {"speaker": "Speaker A", "text": "string"},
         {"speaker": "Speaker B", "text": "string"}
       ],
@@ -179,11 +181,12 @@ Expose a ⁠ relevance_score_0_1 ⁠ per clip based on #1 (context fit), not on 
 2) Scan transcript; form ~30s candidates on strong, on-topic hooks.
 3) Apply Relevance Gate; reject off-topic/weak. If none qualify, choose best on-topic candidate (min 1) and mark notes.
 4) Draft soft mention (personal, wow, ≤20 words, 7–15s) by one speaker; ensure the other speaker continues with ≥2 lines.
-5) Add light connectors for realism (respect limits); keep clarity.
-6) Run negative-prompt checks on the mention; rewrite if needed.
-7) Score **relevance_score_0_1* (context fit) per clip; surface on_topic_terms_found.
-8) Rank by *Context Fit* > Hook Strength > Flow Coherence > Novelty.
-9) Return *1 to CLIP_MAX* clips accordingly.
+5) ENFORCE STRICT ALTERNATION: Organize all dialogue lines to follow Speaker A → Speaker B → Speaker A → Speaker B pattern with NO exceptions.
+6) Add light connectors for realism (respect limits); keep clarity.
+7) Run negative-prompt checks on the mention; rewrite if needed.
+8) Score **relevance_score_0_1* (context fit) per clip; surface on_topic_terms_found.
+9) Rank by *Context Fit* > Hook Strength > Flow Coherence > Novelty.
+10) Return *1 to CLIP_MAX* clips accordingly.
 
 End of system instructions."""
 

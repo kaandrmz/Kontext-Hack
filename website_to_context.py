@@ -2,22 +2,35 @@
 Website to Context Analysis Tool
 
 This script crawls websites using Firecrawl API and analyzes them using OpenAI GPT API
-to extract structured product insights.
+to extract structured product insights with personalized context from Kontext.
 
 Required environment variables:
 - OPENAI_API_KEY: Your OpenAI API key
 - FIRECRAWL_API_KEY: Your Firecrawl API key (get from firecrawl.dev)
+- KONTEXT_API_KEY: Your Kontext API key (optional, for personalized analysis)
+- KONTEXT_API_URL: Kontext API URL (optional, defaults to https://api.kontext.dev)
 
 Install dependencies:
-pip install openai requests python-dotenv
+pip install openai requests python-dotenv aiohttp
+
+Note: The kontext_client is included locally in the kontext-py directory.
 """
 
 import openai
 import json
 import os
 import requests
+import sys
+from pathlib import Path
 from typing import Dict, Any
 from dotenv import load_dotenv
+
+# Add the kontext-py directory to the Python path
+kontext_py_path = Path(__file__).parent / "kontext-py"
+if kontext_py_path.exists():
+    sys.path.insert(0, str(kontext_py_path))
+
+from kontext_client import KontextClientSync, KontextError
 
 # Load environment variables from .env file
 load_dotenv()
@@ -29,18 +42,75 @@ client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 FIRECRAWL_API_KEY = os.getenv("FIRECRAWL_API_KEY")
 FIRECRAWL_BASE_URL = "https://api.firecrawl.dev/v1"
 
-def analyze_website_content(scraped_website_content: str) -> Dict[str, Any]:
+# Kontext API configuration
+KONTEXT_API_KEY = os.getenv("KONTEXT_API_KEY")
+KONTEXT_API_URL = os.getenv("KONTEXT_API_URL", "https://api.kontext.dev")
+
+# Initialize Kontext client if API key is available
+kontext_client = None
+if KONTEXT_API_KEY:
+    kontext_client = KontextClientSync(KONTEXT_API_KEY, KONTEXT_API_URL)
+
+def get_kontext_context(user_id: str = "x5gbu7dvpaXkrFxEzQHZIbbSzU19nWfd") -> str:
     """
-    Sends scraped website content to GPT API for product analysis.
+    Gets personalized context from Kontext API.
+    
+    Args:
+        user_id (str): The user ID to get context for
+        
+    Returns:
+        str: Personalized context or empty string if unavailable
+    """
+    if not kontext_client:
+        print("Warning: Kontext API key not found, proceeding without personalized context")
+        return ""
+    
+    try:
+        context = kontext_client.get_context(
+            user_id=user_id,
+            task="general",  # Task type for general analysis
+            max_tokens=300,  # Limit context size to keep prompt manageable
+            use_identity_mode=True,  # Use identity-based personalization
+        )
+        return context.get("systemPrompt", "")
+    except KontextError as e:
+        print(f"Warning: Failed to get Kontext context: {e}")
+        return ""
+    except Exception as e:
+        print(f"Warning: Unexpected error getting Kontext context: {e}")
+        return ""
+
+def analyze_website_content(scraped_website_content: str, user_id: str = "x5gbu7dvpaXkrFxEzQHZIbbSzU19nWfd") -> Dict[str, Any]:
+    """
+    Sends scraped website content to GPT API for product analysis with personalized context.
     
     Args:
         scraped_website_content (str): The raw scraped website content
+        user_id (str): User ID for personalized Kontext context
         
     Returns:
         Dict[str, Any]: Parsed JSON response from GPT API
     """
     
-    system_prompt = """You are a precise SaaS/product analyst. You will receive a scraped website (raw text, headings, testimonials, images, sometimes messy formatting). Your task is to extract structured, concise insights about the product. Only use information that clearly appears in the scrape, do not hallucinate.
+    # Get personalized context from Kontext
+    kontext_context = get_kontext_context(user_id)
+    
+    # Build the system prompt with optional Kontext context
+    base_system_prompt = """You are a precise SaaS/product analyst. You will receive a scraped website (raw text, headings, testimonials, images, sometimes messy formatting). Your task is to extract structured, concise insights about the product. Only use information that clearly appears in the scrape, do not hallucinate."""
+    
+    # Add Kontext context if available
+    if kontext_context:
+        system_prompt = f"""{base_system_prompt}
+
+## Additional Context:
+Here is extra content about the user's preferences and context: {kontext_context}
+
+Use this additional context to better tailor your analysis and recommendations, but still focus primarily on the scraped website content."""
+    else:
+        system_prompt = base_system_prompt
+    
+    # Add the main instructions
+    system_prompt += """
 
 ## Steps:
 1. Identify the *product/app name* (short, exact string).
@@ -146,12 +216,13 @@ def crawl_website(url: str) -> str:
         print(f"Unexpected error during crawling: {e}")
         return None
 
-def crawl_and_analyze_website(url: str) -> Dict[str, Any]:
+def crawl_and_analyze_website(url: str, user_id: str = "x5gbu7dvpaXkrFxEzQHZIbbSzU19nWfd") -> Dict[str, Any]:
     """
-    Crawls a website using Firecrawl and then analyzes it with GPT.
+    Crawls a website using Firecrawl and then analyzes it with GPT using personalized context.
     
     Args:
         url (str): The website URL to crawl and analyze
+        user_id (str): User ID for personalized Kontext context
         
     Returns:
         Dict[str, Any]: Analysis results from GPT API
@@ -165,20 +236,26 @@ def crawl_and_analyze_website(url: str) -> Dict[str, Any]:
         return None
     
     print(f"Step 2: Analyzing scraped content ({len(scraped_content)} characters)")
-    analysis_result = analyze_website_content(scraped_content)
+    print(f"Step 3: Getting personalized context for user: {user_id}")
+    analysis_result = analyze_website_content(scraped_content, user_id)
     
     return analysis_result
 
 def main():
     """
-    Main function to crawl and analyze the Cal AI website.
+    Main function to crawl and analyze the Cal AI website with personalized context.
     """
     
     # Cal AI website URL
     cal_ai_url = "https://www.calai.app/"
     
-    print("Starting Cal AI website analysis...")
-    result = crawl_and_analyze_website(cal_ai_url)
+    # User ID for personalized context (in production, this would come from your auth system)
+    user_id = "x5gbu7dvpaXkrFxEzQHZIbbSzU19nWfd"
+    
+    print("Starting Cal AI website analysis with personalized context...")
+    print(f"Using user ID: {user_id}")
+    
+    result = crawl_and_analyze_website(cal_ai_url, user_id)
     
     if result:
         print("Analysis complete!")

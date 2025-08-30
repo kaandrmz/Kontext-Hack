@@ -1,0 +1,16 @@
+00:00:00 Speaker A: You know what's frustrating about staying healthy?
+00:00:05 Speaker B: What do you mean?
+00:00:07 Speaker A: Like, everyone talks about tracking calories, but who has time to log every single thing you eat?
+00:00:12 Speaker B: Oh man, totally. I tried that once and gave up after like three days.
+00:00:16 Speaker A: Right? It's like a part-time job. You're there with your phone calculator doing math for a sandwich.
+00:00:22 Speaker B: And then you're guessing portion sizes anyway, so what's the point?
+00:00:26 Speaker A: Exactly! That's why I love when technology actually solves real problems.
+00:00:30 Speaker B: What do you mean by that?
+00:00:32 Speaker A: Like, imagine if you could just take a picture of your food and get all the nutrition info instantly.
+00:00:37 Speaker B: That would be game-changing. Is that even possible?
+00:00:40 Speaker A: I mean, AI is getting pretty crazy these days. Computer vision, machine learning...
+00:00:45 Speaker B: True, but food is so complex. Different ingredients, cooking methods, portion sizes.
+00:00:50 Speaker A: Yeah, but if someone cracked that problem, it would help millions of people stay consistent with their health goals.
+00:00:56 Speaker B: For real. Consistency is everything when it comes to nutrition.
+00:01:00 Speaker A: And most people fail because tracking is too tedious, not because they don't want to be healthy.
+00:01:05 Speaker B: That's a great point. Remove the friction, and people will actually stick with it.
