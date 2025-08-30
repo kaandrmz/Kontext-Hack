@@ -1,0 +1,129 @@
+{
+  "topic": "calorie tracking, nutrition, macros, food logging, AI food recognition",
+  "audience": "Gym-goers & bodybuilders: People bulking or cutting who need fast, accurate macro tracking to hit daily targets without manual logging. | Weight-loss seekers: Individuals who want a simple way to control calories and get visual portion guidance to stay in a deficit.",
+  "clips_ranked": [
+    {
+      "rank": 1,
+      "start_time": "00:01:15",
+      "end_time": "00:01:45",
+      "hook_text": "You know what's crazy about tracking food? Most people just guess their portion sizes.",
+      "full_30s_transcript": "Speaker A: You know what's crazy about tracking food? Most people just guess their portion sizes.\nSpeaker B: Yeah, and they wonder why they're not hitting their goals.\nSpeaker A: The worst part is counting every single calorie manually. It's like a part-time job.\nSpeaker A: I just snap a photo in Cal AI and it spits out calories and macros.\nSpeaker B: Right, and then you're spending 20 minutes just to log one meal.\nSpeaker A: Exactly! That's why most people give up after like a week.\nSpeaker B: There has to be a better way to do this whole thing.\nSpeaker A: Well, technology is getting pretty wild with food recognition now.",
+      "dialogue_lines": [
+        {
+          "speaker": "Speaker A",
+          "text": "You know what's crazy about tracking food? Most people just guess their portion sizes."
+        },
+        {
+          "speaker": "Speaker B",
+          "text": "Yeah, and they wonder why they're not hitting their goals."
+        },
+        {
+          "speaker": "Speaker A",
+          "text": "The worst part is counting every single calorie manually. It's like a part-time job."
+        },
+        {
+          "speaker": "Speaker A",
+          "text": "I just snap a photo in Cal AI and it spits out calories and macros."
+        },
+        {
+          "speaker": "Speaker B",
+          "text": "Right, and then you're spending 20 minutes just to log one meal."
+        },
+        {
+          "speaker": "Speaker A",
+          "text": "Exactly! That's why most people give up after like a week."
+        },
+        {
+          "speaker": "Speaker B",
+          "text": "There has to be a better way to do this whole thing."
+        },
+        {
+          "speaker": "Speaker A",
+          "text": "Well, technology is getting pretty wild with food recognition now."
+        }
+      ],
+      "app_mention_present": true,
+      "app_mention_speaker": "Speaker A",
+      "on_topic_terms_found": [
+        "tracking food",
+        "portion sizes",
+        "calories",
+        "macros",
+        "log",
+        "food recognition"
+      ],
+      "relevance_score_0_1": 0.93,
+      "why_it_fits_app": "This moment nails the pain of guessing portions and the grind of manual logging, then pivots to AI recognition as the path forward—exactly the workflow where photo-based capture removes guesswork and speeds up tracking.",
+      "viral_rationale": {
+        "score_total_0_10": 8.7,
+        "strong_claim_0_5": 4.0,
+        "tension_resolution_0_5": 4.5,
+        "quotability_0_5": 4.0,
+        "specificity_0_5": 4.0,
+        "emotion_fit_0_5": 4.5,
+        "notes": "Hook: \"You know what's crazy about tracking food? Most people just guess their portion sizes.\" On-topic lines: portion sizes, manual calorie counting, 20 minutes to log, food recognition. App line at ~+10s. Connectors used: Yeah, Right, Exactly!, Well."
+      },
+      "confidence_0_1": 0.78
+    },
+    {
+      "rank": 2,
+      "start_time": "00:01:25",
+      "end_time": "00:01:50",
+      "hook_text": "The worst part is counting every single calorie manually. It's like a part-time job.",
+      "full_30s_transcript": "Speaker A: The worst part is counting every single calorie manually. It's like a part-time job.\nSpeaker B: Right, and then you're spending 20 minutes just to log one meal.\nSpeaker A: Exactly! That's why most people give up after like a week.\nSpeaker A: I snap a pic in Cal AI; it estimates the portion and macros from that.\nSpeaker B: There has to be a better way to do this whole thing.\nSpeaker A: Well, technology is getting pretty wild with food recognition now.\nSpeaker B: True, but most apps still make you search through huge databases.",
+      "dialogue_lines": [
+        {
+          "speaker": "Speaker A",
+          "text": "The worst part is counting every single calorie manually. It's like a part-time job."
+        },
+        {
+          "speaker": "Speaker B",
+          "text": "Right, and then you're spending 20 minutes just to log one meal."
+        },
+        {
+          "speaker": "Speaker A",
+          "text": "Exactly! That's why most people give up after like a week."
+        },
+        {
+          "speaker": "Speaker A",
+          "text": "I snap a pic in Cal AI; it estimates the portion and macros from that."
+        },
+        {
+          "speaker": "Speaker B",
+          "text": "There has to be a better way to do this whole thing."
+        },
+        {
+          "speaker": "Speaker A",
+          "text": "Well, technology is getting pretty wild with food recognition now."
+        },
+        {
+          "speaker": "Speaker B",
+          "text": "True, but most apps still make you search through huge databases."
+        }
+      ],
+      "app_mention_present": true,
+      "app_mention_speaker": "Speaker A",
+      "on_topic_terms_found": [
+        "calorie",
+        "log",
+        "portion",
+        "macros",
+        "food recognition",
+        "apps",
+        "databases"
+      ],
+      "relevance_score_0_1": 0.9,
+      "why_it_fits_app": "This segment spotlights the time-sink of manual counting and the friction of database search, which sets up the value of fast, photo-first logging and accurate portion estimation for mixed meals.",
+      "viral_rationale": {
+        "score_total_0_10": 8.5,
+        "strong_claim_0_5": 4.2,
+        "tension_resolution_0_5": 4.0,
+        "quotability_0_5": 4.3,
+        "specificity_0_5": 4.2,
+        "emotion_fit_0_5": 4.3,
+        "notes": "Hook: \"The worst part is counting every single calorie manually. It's like a part-time job.\" On-topic lines: 20 minutes to log, better way, food recognition, apps/databases friction. App line at ~+10s. Connectors used: Right, Exactly!, Well, True."
+      },
+      "confidence_0_1": 0.74
+    }
+  ]
+}
